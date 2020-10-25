@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvernoteClone.Entity", "EvernoteClone.Entity\EvernoteClone.Entity.csproj", "{842D4027-C667-461A-BEEB-85768907F1B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvernoteClone.WEB", "EvernoteClone.WEB\EvernoteClone.WEB.csproj", "{9F56DFCF-D6BB-4A83-9C7E-4757E255FBFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{842D4027-C667-461A-BEEB-85768907F1B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{842D4027-C667-461A-BEEB-85768907F1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{842D4027-C667-461A-BEEB-85768907F1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{842D4027-C667-461A-BEEB-85768907F1B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F56DFCF-D6BB-4A83-9C7E-4757E255FBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F56DFCF-D6BB-4A83-9C7E-4757E255FBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F56DFCF-D6BB-4A83-9C7E-4757E255FBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F56DFCF-D6BB-4A83-9C7E-4757E255FBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0E383B4-BEFD-4B54-84B6-88593A5480A3}
+	EndGlobalSection
+EndGlobal
