@@ -1,0 +1,15 @@
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EvernoteClone.Entity.dll.config
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EvernoteClone.Entity.dll
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EvernoteClone.Entity.pdb
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EntityFramework.dll
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EntityFramework.xml
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.csproj.CopyComplete
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.dll
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.pdb
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.Migrations.firstMigration.resources
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.Migrations.emailKarakterSayisiDegistirildi.resources

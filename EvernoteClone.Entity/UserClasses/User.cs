@@ -32,13 +32,12 @@ namespace EvernoteClone.Entity.UserClasses
         [DisplayName("Doğum Tarihi")]
         [Column(TypeName = "datetime2")]
         [Required(ErrorMessage = "{0} alanı boş bırakılamaz.")]
-        [StringLength(15, MinimumLength = 6, ErrorMessage = "{0}, alanı en fazla {2}, en az {1} karakter olabilir.")]
         public DateTime DayOfBirth { get; set; }
 
-        [DisplayName("Doğum Tarihi")]
+        [DisplayName("Email")]
         [DataType(DataType.EmailAddress)]
         [Required(ErrorMessage = "{0} alanı boş bırakılamaz.")]
-        [StringLength(15, MinimumLength = 6, ErrorMessage = "{0}, alanı en fazla {2}, en az {1} karakter olabilir.")]
+        [MinLength (6, ErrorMessage = "{0}, alanı en az {1} karakter olabilir.")]
         public string Email { get; set; }
 
         [DisplayName("Bölümü")]

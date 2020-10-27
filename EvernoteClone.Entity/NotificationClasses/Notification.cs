@@ -1,18 +1,21 @@
 ﻿using EvernoteClone.Entity.BaseClasses;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EvernoteClone.Entity.Enum;
+using EvernoteClone.Entity.UserClasses;
 
 namespace EvernoteClone.Entity.NotificationClasses
 {
-    class Notification : BaseObject
+    public class Notification : BaseObject
     {
-        public string Noti { get; set; }
+        public int NotiId { get; set; }
 
+        public string Description { get; set; }
 
+        public string ContAction { get; set; }
+
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
+
+        public NotificationStatus NotificationStatus { get; set; }
 
     }
 }

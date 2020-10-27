@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EvernoteClone.Entity.UserClasses
 {
-    class UserDetail 
+    public class UserDetail 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

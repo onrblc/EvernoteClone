@@ -1,9 +1,12 @@
-﻿using System.Configuration;
+﻿using EvernoteClone.Entity.NoteClasses;
+using EvernoteClone.Entity.NotificationClasses;
+using EvernoteClone.Entity.UserClasses;
+using System.Configuration;
 using System.Data.Entity;
 
 namespace EvernoteClone.Entity.Context
 {
-    class DataContext : DbContext
+    public class DataContext : DbContext
     {
 
         public DataContext() : base(ConnectionString())
@@ -18,5 +21,13 @@ namespace EvernoteClone.Entity.Context
         
             return conStr.ToString();
         }
+
+
+        public DbSet<User> User { get; set; }
+        public DbSet<Note> Note { get; set; }
+        public DbSet<UserDetail> UserDetail { get; set; }
+        public DbSet<Notification> Notification { get; set; }
+
+
     }
 }
