@@ -1,0 +1,41 @@
+﻿@model EvernoteClone.Entity.NoteClasses.Note
+
+@* UPDATE VE CREATE, UI BOŞ VE DOLU GELMESİ ŞEKLİNDE MANTIK AYNI
+DAHA İYİ BİR TASARIM YAPABİLİRİM.
+*@
+
+@{
+
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("NewNotes", "Note", FormMethod.Post))
+{
+
+	@Html.AntiForgeryToken()
+
+	<div class="form-group ">
+
+		<div class="d-flex p-3 bg-white">
+			<div class="p-2"><button type="submit" class="btn btn-primary" value="Submit">Kaydet</button></div>
+		</div>
+		@if (@ViewBag.Error.Length > 0)
+		{
+			<div class="col-xl-3 col-xs-3 col-md-3 ">
+				<strong><h4 style="color:red">@ViewBag.Error</h4></strong>
+			</div>
+		}
+	</div>
+
+	@Html.EditorFor(model => model.Description, new
+	{
+		htmlAttributes = new
+		{
+		 @class = "form-control col-md-12 col-sm-12 col-xs-12",
+		 @rows = 30,
+		 @required = ""
+	 }
+ })
+
+
+}

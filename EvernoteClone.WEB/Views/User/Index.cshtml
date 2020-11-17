@@ -1,0 +1,153 @@
+﻿@model IEnumerable<EvernoteClone.Entity.UserClasses.User>
+@using EvernoteClone.WEB.Helpers
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+	tr:hover {
+		background-color: grey;
+	}
+</style>
+
+
+<div class="card mb-4">
+	<div class="card-header">
+	</div>
+	<div class="card-body">
+		<div class="table-responsive">
+			<div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+				<div class="row">
+
+					<div class="col-md-12">
+						<div class="col-md-1">
+							<button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Oluştur" onclick="location.href='Create'"><i class="fas fa-plus"></i> </button>
+						</div>
+						<div class="col">
+							<h4 class="float-right">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								Aktif Kullanıcı: @ViewBag.ActiveUsers
+							</h4>
+						</div>
+					</div>
+						<br /><br /><br />
+
+
+						@*<div class="col-md-12">
+			<div id="dataTable_filter" class="dataTables_filter">
+				<label>
+					Search:<input type="search"
+												class="form-control form-control-sm" placeholder="" aria-controls="dataTable">
+				</label>
+			</div>
+		</div>*@
+					</div>
+
+				<div class="row">
+					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+
+						<thead>
+							<tr role="row">
+								<th></th>
+								<th></th>
+								<th>@Html.DisplayNameFor(model => model.Name)</th>
+								<th>@Html.DisplayNameFor(model => model.Surname)</th>
+								<th>@Html.DisplayNameFor(model => model.UserName)</th>
+								<th>@Html.DisplayNameFor(model => model.Password)</th>
+								<th>@Html.DisplayNameFor(model => model.DayOfBirth)</th>
+								<th>@Html.DisplayNameFor(model => model.Email)</th>
+								<th>@Html.DisplayNameFor(model => model.Department)</th>
+								<th>@Html.DisplayNameFor(model => model.Status)</th>
+								<th>@Html.DisplayNameFor(model => model.ObjectStatus)</th>
+
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th></th>
+								<th>@Html.DisplayNameFor(model => model.Name)</th>
+								<th>@Html.DisplayNameFor(model => model.Surname)</th>
+								<th>@Html.DisplayNameFor(model => model.UserName)</th>
+								<th>@Html.DisplayNameFor(model => model.Password)</th>
+								<th>@Html.DisplayNameFor(model => model.DayOfBirth)</th>
+								<th>@Html.DisplayNameFor(model => model.Email)</th>
+								<th>@Html.DisplayNameFor(model => model.Department)</th>
+								<th>@Html.DisplayNameFor(model => model.Status)</th>
+								<th>@Html.DisplayNameFor(model => model.ObjectStatus)</th>
+							</tr>
+						</tfoot>
+						<tbody>
+							@foreach (var item in Model)
+							{
+								<tr role="row" data-id="@item.Id">
+									<td>
+										<button class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Düzenle" onclick="location.href='Edit/@item.Id'"><i class="fas fa-edit"></i></button>
+									</td>
+									<td>
+										<button class="btn btn-info" id="btnDelete" data-toggle="tooltip" data-placement="top" title="Sil" ><i class="fas fa-trash-alt"></i></button>
+										@*onclick="location.href='Delete/@item.Id'*@
+									</td>
+									<td>@Html.DisplayFor(modelItem => item.Name)</td>
+									<td>@Html.DisplayFor(modelItem => item.Surname)</td>
+									<td>@Html.DisplayFor(modelItem => item.UserName)</td>
+									<td>@Html.DisplayFor(modelItem => item.Password)</td>
+									<td>@Html.DisplayFor(modelItem => item.DayOfBirth)</td>
+									<td>@Html.DisplayFor(modelItem => item.Email)</td>
+									<td>@item.Department.DisplayName()</td>
+									<th>@item.Status.DisplayName()</th>
+									<th>@item.ObjectStatus.DisplayName()</th>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+@section scripts{
+	<script type="text/javascript">
+		//$(document).ready(function () {
+		$("body").on("click", "#btnDelete", function () {
+
+			var row = $(this).closest('tr');
+			var id = row.data('id');
+
+			Swal.fire(
+				{
+					title: 'Silinecek',
+					text: 'Emin misiniz?',
+					icon: 'warning',
+					showCancelButton: true,
+					showLoaderOnConfirm: true,
+					confirmButtonText: 'Tamam',
+					cancelButtonText: 'İptal',
+					preConfirm: (login) => {
+						$.ajax(
+							{
+								contentType: false,
+								cache: false,
+								processData: false,
+								url: "/User/Delete/" + id,
+								type: "POST",
+								success: function (result) {
+									alert(row);
+									console.log(row);
+									SweetAlertDailogMessage(result.Type, result.Message, row);
+								}
+							});
+					},
+					
+					allowOutsideClick: () => !Swal.isLoading()
+				})
+		});
+																			//});
+
+	</script>
+}
+

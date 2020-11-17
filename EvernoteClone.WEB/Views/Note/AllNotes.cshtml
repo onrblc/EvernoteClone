@@ -1,0 +1,59 @@
+﻿@using EvernoteClone.Entity.NoteClasses
+@model List<string>
+
+@{
+	ViewBag.Title = "AddNotes";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Delete", "Note", FormMethod.Post))
+{
+
+	@Html.AntiForgeryToken()
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+
+				<button type="submit" class="btn btn-info col-xl-1 customSizeButton" id="btnDelete" style="margin:10px" style="visibility: hidden;"><i class="fas fa-trash-alt"></i></button>
+
+				<div class="single category">
+					<ul class="list-unstyled">
+						@{
+							for (int i = 0; i < @Model.Count; i++)
+							{
+								<li>
+									<div id="allCheckboxes">
+										<span class="pull-left col-md-1 col-xl-1 col-xs-1">
+											<input type="checkbox" id="customBigCheckbox" name="Id" value="@ViewBag.IdList[i]"/>
+										</span>
+									</div>
+									<h3>
+										<a class="nav-link" href="~/Note/OldNotes/@ViewBag.IdList[i]"> @Model[i].ToString()</a>
+									</h3>
+								</li>
+							}
+						}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+
+
+@section scripts{
+	<script type="text/javascript">
+
+		$("#btnDelete").hide();
+
+		$('#allCheckboxes input[type=checkbox]').on('change', function () {
+			if ($(this).prop('checked') == true)
+				$("#btnDelete").show();  // checked
+			else if (!$("#allCheckboxes input[type=checkbox]:checked").length)
+				$("#btnDelete").hide();  // unchecked
+		})
+
+	</script>
+}

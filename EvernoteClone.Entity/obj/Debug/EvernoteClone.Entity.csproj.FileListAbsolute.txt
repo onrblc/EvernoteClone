@@ -11,5 +11,6 @@ C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteCl
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.pdb
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.Migrations.firstMigration.resources
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.csproj.GenerateResource.cache
-C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.Migrations.emailKarakterSayisiDegistirildi.resources
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.Migrations.NoteModeldeUserIdEklendi.resources
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.Entity\obj\Debug\EvernoteClone.Entity.Migrations.DenemeAnnotationDegistirdim2.resources

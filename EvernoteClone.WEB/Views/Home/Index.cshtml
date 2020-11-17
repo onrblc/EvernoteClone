@@ -1,29 +1,3 @@
-﻿@model EvernoteClone.Entity.NoteClasses.Note
+﻿<h2>Notlar ve Kullanıcılar ile CRUD işlemleri uygulandı.</h2>
 
-@using (Html.BeginForm("Index", "Home", FormMethod.Post))
-{
-	<div class="d-flex p-3 bg-white">
-		<div class="p-2"><button type="submit" class="btn btn-primary" value="Submit">Kaydet</button></div>
-		<div class="p-2">Güncelle?</div>
-		<div class="p-2">Sil?</div>
-		<div class="p-2">Kalın yap</div>
-		<div class="p-2">Boyut seçtir</div>
-		<div class="p-2 "><button type="submit" class="btn btn-danger btn-lg" value="Submit"></button></div>
-	</div>
-
-	<p>burada kaydet aslında, modified ile içini önce boşalt sonra yeni gelenleri aynı id'ye modified et </p>
-
-
-	@Html.EditorFor(model => model.Description, new
-	{
-		htmlAttributes = new
-		{
-			@class = "form-control col-md-12 col-sm-12 col-xs-12"@*,@cols = 50*@,
-@rows = 30,
-@required = ""
-}
-})
-
-
-}
 

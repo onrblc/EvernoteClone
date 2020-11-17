@@ -37,5 +37,12 @@ namespace EvernoteClone.WEB.Models
         {
             HttpContext.Current.Session.Clear();
         }
+
+        public static string GetOnlineUser()
+        {
+            string result = "";
+            result = string.Format("{0} {1}", User.Name, User.Surname);
+            return result;
+        }
     }
 }

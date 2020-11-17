@@ -16,29 +16,14 @@ namespace EvernoteClone.WEB.Controllers
 
         public ActionResult Index()
         {
-            //if (CurrentSession.User == null)
-            //{
-            //    return RedirectToAction("Login");
-            //}
+            //TEMSİLİ AÇILIŞ SAYFASI
 
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Index(Note note)
-        {
-            if(note == null)
+            if (CurrentSession.User == null)
             {
-                return View(note);
+                return RedirectToAction("Login");
             }
 
-            //db.Entry(note).State = System.Data.Entity.EntityState.Added; 
-
-            db.Note.Add(note);
-
-            db.SaveChanges();
-
-            return View(note);
+            return View();
         }
 
 
@@ -47,6 +32,7 @@ namespace EvernoteClone.WEB.Controllers
             ViewBag.Message = "";
             return View();
         }
+
 
         [HttpPost]
         public ActionResult Login(LoginModel userModel)
@@ -70,6 +56,14 @@ namespace EvernoteClone.WEB.Controllers
                 if (user.ObjectStatus != Entity.Enum.ObjectStatus.Deleted && user.Status != Entity.Enum.Status.Passive)
                 {
                     CurrentSession.Set<User>("login", user);
+
+                    //db.UserDetail.Add(new UserDetail
+                    //{
+                    //    SessionDate = DateTime.Now,
+                    //    UserId = CurrentSession.User.Id,
+                    //    SessionTime = 
+                    //});
+
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -77,8 +71,6 @@ namespace EvernoteClone.WEB.Controllers
                 return View(userModel);
 
             }
-
-
         }
 
         public ActionResult LogOut()

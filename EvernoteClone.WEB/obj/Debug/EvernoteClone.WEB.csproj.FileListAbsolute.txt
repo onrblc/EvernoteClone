@@ -61,3 +61,5 @@ C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.WEB\obj\Debug\EvernoteClone
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.WEB\bin\EvernoteClone.Entity.dll
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.WEB\bin\EvernoteClone.Entity.pdb
 C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.WEB\bin\EvernoteClone.Entity.dll.config
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.WEB\bin\System.ValueTuple.dll
+C:\Users\PC\source\repos\EvernoteClone\EvernoteClone.WEB\bin\System.ValueTuple.xml

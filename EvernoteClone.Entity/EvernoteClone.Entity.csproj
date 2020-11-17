@@ -66,6 +66,14 @@
     <Compile Include="Migrations\202010261604202_emailKarakterSayisiDegistirildi.designer.cs">
       <DependentUpon>202010261604202_emailKarakterSayisiDegistirildi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010280821348_NoteModeldeUserIdEklendi.cs" />
+    <Compile Include="Migrations\202010280821348_NoteModeldeUserIdEklendi.designer.cs">
+      <DependentUpon>202010280821348_NoteModeldeUserIdEklendi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011161816110_DenemeAnnotationDegistirdim2.cs" />
+    <Compile Include="Migrations\202011161816110_DenemeAnnotationDegistirdim2.designer.cs">
+      <DependentUpon>202011161816110_DenemeAnnotationDegistirdim2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NoteClasses\Note.cs" />
     <Compile Include="NotificationClasses\Notification.cs" />
@@ -80,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010261604202_emailKarakterSayisiDegistirildi.resx">
       <DependentUpon>202010261604202_emailKarakterSayisiDegistirildi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010280821348_NoteModeldeUserIdEklendi.resx">
+      <DependentUpon>202010280821348_NoteModeldeUserIdEklendi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011161816110_DenemeAnnotationDegistirdim2.resx">
+      <DependentUpon>202011161816110_DenemeAnnotationDegistirdim2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

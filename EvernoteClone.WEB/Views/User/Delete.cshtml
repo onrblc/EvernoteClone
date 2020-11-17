@@ -1,0 +1,22 @@
+﻿@model EvernoteClone.Entity.UserClasses.User
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@* KULLANMIYORUM *@
+
+@using (Html.BeginForm("Delete", "User", FormMethod.Post))
+{
+
+	@Html.AntiForgeryToken()
+
+	<ul class="list-group">
+		<br />
+		<br />
+		<li class="list-group-item active"><strong>@Html.DisplayFor(model => model.Name) @Html.DisplayFor(model => model.Surname) isimli kullanıcıyı silmek istediğinize emin misiniz?</strong></li>
+	</ul>
+
+	<button type="submit" class="btn btn-info"><i class="far fa-trash-alt"></i></button>
+
+}
