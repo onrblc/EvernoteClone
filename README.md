@@ -1,5 +1,6 @@
 # EvernoteClone
 Öğrendiklerim ile ASP.NET MVC 4.0 not uygulaması oluşturdum. 
+I build a simple note application with MVC 4.0.
 
 - CRUD İşlemleri
 - JQuery
